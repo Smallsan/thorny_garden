@@ -1,5 +1,7 @@
 use serenity::{all::{Context, EventHandler, Message, Ready}, async_trait};
+use utils::key_manager::get_key;
 
+mod utils;
 
 
 struct Handler;
@@ -17,5 +19,6 @@ impl EventHandler for Handler {
 
 
 fn main() {
+    get_key();
     println!("Hello, world!");
 }
